@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>URL Shortner</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="head">
+                <h1 id="heading">URL <span>Shortner</span></h1>
+                <p id="sub-head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, assumenda Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="enter-url">
+                <label for="url">Paste the URL to be shorten</label>
+                <form action="/shorten" id="form-url" method="post">
+                    <input type="search" name="url" placeholder="Enter your URL here" value="{{longUrl}}">
+                    <button type="submit">Short URL</button>
+                </form>
+            </div>
+            <div class="result" style="{{block}}">
+                <p id="output">Here is your short URL: <span id="shortUrl">{{shortUrl}}</span></p>
+                <form action="/" method="post">
+                    <button type="button" id="copy" onclick="copyToClipboard()">Copy</button>
+                    <button type="submit" id="reset">Reset</button>
+                </form>
+                <p id="alert">Url Copied Successfully!</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="box">
+            <ul id="links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/terms_of_service">Terms of Service</a></li>
+            </ul>
+            <hr>
+            <p id="copyright">© 2023 Shortner.com - Tool to shorten a long link</p>
+        </div>
+    </footer>
+
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
